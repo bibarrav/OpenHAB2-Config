@@ -1,0 +1,12 @@
+host.key
+events.log*
+openhab.log
+sonoff.ino.bin
+*.swp
+.tmp*.instance
+keystore
+secret
+uuid
+OpenHAB2/openhab/userdata/tmp/
+OpenHAB2/openhab/userdata/cache/
+OpenHAB2/openhab/userdata/dropbox/authfile.dbx

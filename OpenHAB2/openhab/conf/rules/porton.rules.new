@@ -1,0 +1,20 @@
+rule "Porton Electrico"
+when
+	Item BotonPortonFunciones received command
+then
+	logInfo("porton.rules", "Commando Porton Electrico: " + receivedCommand)
+	switch (receivedCommand) {
+		case "ON" :
+			BotonPorton.sendCommand(ON)
+		case "OpenA" : {
+			BotonPorton.sendCommand(ON)
+			Thread::sleep(5000)
+			BotonPorton.sendCommand(ON)
+		}
+		case "OpenB" : {
+			BotonPorton.sendCommand(ON)
+                        Thread::sleep(10000)
+                        BotonPorton.sendCommand(ON)
+		}
+	}
+end

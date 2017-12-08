@@ -1,0 +1,198 @@
+{
+  "LocalComputer_Network_MacAddress -\u003e systeminfo:computer:openhab-Compaq-Mini-CQ10-100:network#mac": {
+    "class": "org.eclipse.smarthome.core.thing.link.ItemChannelLink",
+    "value": {
+      "channelUID": {
+        "segments": [
+          "systeminfo",
+          "computer",
+          "openhab-Compaq-Mini-CQ10-100",
+          "network#mac"
+        ]
+      },
+      "itemName": "LocalComputer_Network_MacAddress"
+    }
+  },
+  "MySensorsGateway_Online -\u003e network:device:2699bbee:online": {
+    "class": "org.eclipse.smarthome.core.thing.link.ItemChannelLink",
+    "value": {
+      "channelUID": {
+        "segments": [
+          "network",
+          "device",
+          "2699bbee",
+          "online"
+        ]
+      },
+      "itemName": "MySensorsGateway_Online"
+    }
+  },
+  "LocalComputer_Storage_Available -\u003e systeminfo:computer:openhab-Compaq-Mini-CQ10-100:storage#available": {
+    "class": "org.eclipse.smarthome.core.thing.link.ItemChannelLink",
+    "value": {
+      "channelUID": {
+        "segments": [
+          "systeminfo",
+          "computer",
+          "openhab-Compaq-Mini-CQ10-100",
+          "storage#available"
+        ]
+      },
+      "itemName": "LocalComputer_Storage_Available"
+    }
+  },
+  "OfficeLight -\u003e wemo:lightswitch:2962766d:state": {
+    "class": "org.eclipse.smarthome.core.thing.link.ItemChannelLink",
+    "value": {
+      "channelUID": {
+        "segments": [
+          "wemo",
+          "lightswitch",
+          "2962766d",
+          "state"
+        ]
+      },
+      "itemName": "OfficeLight"
+    }
+  },
+  "WeatherInformation_Pressure -\u003e yahooweather:weather:65b57fde:pressure": {
+    "class": "org.eclipse.smarthome.core.thing.link.ItemChannelLink",
+    "value": {
+      "channelUID": {
+        "segments": [
+          "yahooweather",
+          "weather",
+          "65b57fde",
+          "pressure"
+        ]
+      },
+      "itemName": "WeatherInformation_Pressure"
+    }
+  },
+  "LocalComputer_Cpu_Load -\u003e systeminfo:computer:openhab-Compaq-Mini-CQ10-100:cpu#load": {
+    "class": "org.eclipse.smarthome.core.thing.link.ItemChannelLink",
+    "value": {
+      "channelUID": {
+        "segments": [
+          "systeminfo",
+          "computer",
+          "openhab-Compaq-Mini-CQ10-100",
+          "cpu#load"
+        ]
+      },
+      "itemName": "LocalComputer_Cpu_Load"
+    }
+  },
+  "LocalComputer_Swap_Available -\u003e systeminfo:computer:openhab-Compaq-Mini-CQ10-100:swap#available": {
+    "class": "org.eclipse.smarthome.core.thing.link.ItemChannelLink",
+    "value": {
+      "channelUID": {
+        "segments": [
+          "systeminfo",
+          "computer",
+          "openhab-Compaq-Mini-CQ10-100",
+          "swap#available"
+        ]
+      },
+      "itemName": "LocalComputer_Swap_Available"
+    }
+  },
+  "MySensorsGateway_Time -\u003e network:device:2699bbee:time": {
+    "class": "org.eclipse.smarthome.core.thing.link.ItemChannelLink",
+    "value": {
+      "channelUID": {
+        "segments": [
+          "network",
+          "device",
+          "2699bbee",
+          "time"
+        ]
+      },
+      "itemName": "MySensorsGateway_Time"
+    }
+  },
+  "WeatherInformation_Temperature -\u003e yahooweather:weather:65b57fde:temperature": {
+    "class": "org.eclipse.smarthome.core.thing.link.ItemChannelLink",
+    "value": {
+      "channelUID": {
+        "segments": [
+          "yahooweather",
+          "weather",
+          "65b57fde",
+          "temperature"
+        ]
+      },
+      "itemName": "WeatherInformation_Temperature"
+    }
+  },
+  "LocalComputer_Battery_RemainingCapacity -\u003e systeminfo:computer:openhab-Compaq-Mini-CQ10-100:battery#remainingCapacity": {
+    "class": "org.eclipse.smarthome.core.thing.link.ItemChannelLink",
+    "value": {
+      "channelUID": {
+        "segments": [
+          "systeminfo",
+          "computer",
+          "openhab-Compaq-Mini-CQ10-100",
+          "battery#remainingCapacity"
+        ]
+      },
+      "itemName": "LocalComputer_Battery_RemainingCapacity"
+    }
+  },
+  "NetworkDevice10011_Online -\u003e network:device:10_0_1_1:online": {
+    "class": "org.eclipse.smarthome.core.thing.link.ItemChannelLink",
+    "value": {
+      "channelUID": {
+        "segments": [
+          "network",
+          "device",
+          "10_0_1_1",
+          "online"
+        ]
+      },
+      "itemName": "NetworkDevice10011_Online"
+    }
+  },
+  "WeatherInformation_Humidity -\u003e yahooweather:weather:65b57fde:humidity": {
+    "class": "org.eclipse.smarthome.core.thing.link.ItemChannelLink",
+    "value": {
+      "channelUID": {
+        "segments": [
+          "yahooweather",
+          "weather",
+          "65b57fde",
+          "humidity"
+        ]
+      },
+      "itemName": "WeatherInformation_Humidity"
+    }
+  },
+  "RootRouter10011_Time -\u003e network:device:10_0_1_1:time": {
+    "class": "org.eclipse.smarthome.core.thing.link.ItemChannelLink",
+    "value": {
+      "channelUID": {
+        "segments": [
+          "network",
+          "device",
+          "10_0_1_1",
+          "time"
+        ]
+      },
+      "itemName": "RootRouter10011_Time"
+    }
+  },
+  "LocalComputer_Memory_Available -\u003e systeminfo:computer:openhab-Compaq-Mini-CQ10-100:memory#available": {
+    "class": "org.eclipse.smarthome.core.thing.link.ItemChannelLink",
+    "value": {
+      "channelUID": {
+        "segments": [
+          "systeminfo",
+          "computer",
+          "openhab-Compaq-Mini-CQ10-100",
+          "memory#available"
+        ]
+      },
+      "itemName": "LocalComputer_Memory_Available"
+    }
+  }
+}

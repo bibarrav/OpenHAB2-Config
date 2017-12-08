@@ -1,0 +1,21 @@
+var Int 2ndFFamilyRoomCounter = 0
+
+// Control de luz de Sala de Estar usando el estado de la luz del pasillo del segundo piso
+rule "Lampara Sala de Estar ON"
+when
+        Item LuzSalaEstar2doPiso changed from ON to OFF
+then
+	If (2ndFFamilyRoomCounter = 1) { LampSalaEstar2doPiso.sendCommand(ON) }
+	2ndFFamilyRoomCounter++
+	If (2ndFFamilyRoomCounter > 3) { 2ndFFamilyRoomCounter = 0 }
+end
+
+rule "Lampara Sala de Estar OFF"
+when
+        Item LuzSalaEstar2doPiso changed from OFF to ON
+then
+        If (2ndFFamilyRoomCounter = 2) { LampSalaEstar2doPiso.sendCommand(OFF) }
+        2ndFFamilyRoomCounter++
+	If (2ndFFamilyRoomCounter > 3) { 2ndFFamilyRoomCounter = 0 }
+
+end

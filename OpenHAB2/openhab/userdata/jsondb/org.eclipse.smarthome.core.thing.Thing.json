@@ -1,0 +1,1991 @@
+{
+  "network:device:10_0_1_5": {
+    "class": "org.eclipse.smarthome.core.thing.internal.ThingImpl",
+    "value": {
+      "label": "Network Device (10.0.1.5)",
+      "channels": [
+        {
+          "acceptedItemType": "Switch",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "10_0_1_5",
+              "online"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "online"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "10_0_1_5",
+              "time"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "time"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        }
+      ],
+      "configuration": {
+        "properties": {
+          "hostname": "10.0.1.5",
+          "refresh_interval": 60000.0,
+          "port": 0.0,
+          "retry": 1.0,
+          "timeout": 5000.0,
+          "use_system_ping": false
+        }
+      },
+      "properties": {},
+      "uid": {
+        "segments": [
+          "network",
+          "device",
+          "10_0_1_5"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "network",
+          "device"
+        ]
+      }
+    }
+  },
+  "network:device:10_0_1_7": {
+    "class": "org.eclipse.smarthome.core.thing.internal.ThingImpl",
+    "value": {
+      "label": "Network Device (10.0.1.7)",
+      "channels": [
+        {
+          "acceptedItemType": "Switch",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "10_0_1_7",
+              "online"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "online"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "10_0_1_7",
+              "time"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "time"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        }
+      ],
+      "configuration": {
+        "properties": {
+          "hostname": "10.0.1.7",
+          "refresh_interval": 60000.0,
+          "port": 0.0,
+          "retry": 1.0,
+          "timeout": 5000.0,
+          "use_system_ping": false
+        }
+      },
+      "properties": {},
+      "uid": {
+        "segments": [
+          "network",
+          "device",
+          "10_0_1_7"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "network",
+          "device"
+        ]
+      }
+    }
+  },
+  "systeminfo:computer:openhab-Compaq-Mini-CQ10-100": {
+    "class": "org.eclipse.smarthome.core.thing.internal.ThingImpl",
+    "value": {
+      "label": "Local computer",
+      "channels": [
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "memory#total"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "total"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "memory#available"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "available"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "High"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "memory#used"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "used"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "High"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "memory#availablePercent"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "availablePercent"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "High"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "storage#total"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "total"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "storage#available"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "available"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "High"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "storage#used"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "used"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "High"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "storage#availablePercent"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "availablePercent"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "High"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "String",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "storage#name"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "name"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "String",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "storage#description"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "description"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "String",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "storage#type"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "type"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "sensors#cpuTemp"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "cpuTemp"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "High"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "sensors#cpuVoltage"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "cpuVoltage"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Medium"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "sensors#fanSpeed"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "fanSpeed"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Medium"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "String",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "cpu#name"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "name"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "String",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "cpu#description"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "description"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "cpu#load"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "load"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "cpu#load1"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "loadAverage"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Medium"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "cpu#load5"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "loadAverage"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Medium"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "cpu#load15"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "loadAverage"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Medium"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "cpu#uptime"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "uptime"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Medium"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "cpu#threads"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "threads"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Medium"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "process#load"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "load_process"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "High",
+              "pid": 0.0
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "process#used"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "used_process"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "High",
+              "pid": 0.0
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "String",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "process#name"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "name_process"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low",
+              "pid": 0.0
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "process#threads"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "threads_process"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Medium",
+              "pid": 0.0
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "String",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "process#path"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "path_process"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low",
+              "pid": 0.0
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "String",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "drive#name"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "name"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "String",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "drive#model"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "model"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "String",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "drive#serial"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "serial"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "swap#total"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "total"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "swap#available"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "available"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "High"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "swap#used"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "used"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "High"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "swap#availablePercent"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "availablePercent"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "High"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "String",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "display#information"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "information"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "String",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "battery#name"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "name"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "battery#remainingCapacity"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "remainingCapacity"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Medium"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "battery#remainingTime"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "remainingTime"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Medium"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "String",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "network#ip"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "ip"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "String",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "network#networkName"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "networkName"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "String",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "network#networkDisplayName"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "networkDisplayName"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "network#dataSent"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "dataSent"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Medium"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "network#dataReceived"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "dataReceived"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Medium"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "network#packagesSent"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "packagesSent"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Medium"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "network#packagesReceied"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "packagesReceived"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Medium"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "String",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "systeminfo",
+              "computer",
+              "openhab-Compaq-Mini-CQ10-100",
+              "network#mac"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "systeminfo",
+              "mac"
+            ]
+          },
+          "configuration": {
+            "properties": {
+              "priority": "Low"
+            }
+          },
+          "properties": {},
+          "defaultTags": []
+        }
+      ],
+      "configuration": {
+        "properties": {
+          "interval_high": 1.0,
+          "interval_medium": 60.0
+        }
+      },
+      "properties": {
+        "os_family": "OS Family",
+        "os_version": "OS Version",
+        "cpu_physicalCores": "CPU Physical Cores",
+        "os_manufacturer": "OS Manufacturer",
+        "cpu_logicalCores": "CPU Logical Cores"
+      },
+      "uid": {
+        "segments": [
+          "systeminfo",
+          "computer",
+          "openhab-Compaq-Mini-CQ10-100"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "systeminfo",
+          "computer"
+        ]
+      }
+    }
+  },
+  "network:device:10_0_1_1": {
+    "class": "org.eclipse.smarthome.core.thing.internal.ThingImpl",
+    "value": {
+      "label": "Root Router (10.0.1.1)",
+      "channels": [
+        {
+          "acceptedItemType": "Switch",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "10_0_1_1",
+              "online"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "online"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "10_0_1_1",
+              "time"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "time"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        }
+      ],
+      "configuration": {
+        "properties": {
+          "hostname": "10.0.1.1",
+          "refresh_interval": 60000.0,
+          "port": 0.0,
+          "retry": 1.0,
+          "timeout": 5000.0,
+          "use_system_ping": true
+        }
+      },
+      "properties": {},
+      "uid": {
+        "segments": [
+          "network",
+          "device",
+          "10_0_1_1"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "network",
+          "device"
+        ]
+      }
+    }
+  },
+  "network:device:2699bbee": {
+    "class": "org.eclipse.smarthome.core.thing.internal.ThingImpl",
+    "value": {
+      "label": "MySensors Gateway",
+      "channels": [
+        {
+          "acceptedItemType": "Switch",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "2699bbee",
+              "online"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "online"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "2699bbee",
+              "time"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "time"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        }
+      ],
+      "configuration": {
+        "properties": {
+          "hostname": "10.0.1.8",
+          "refresh_interval": 60000.0,
+          "port": 0.0,
+          "retry": 1.0,
+          "timeout": 5000.0,
+          "use_system_ping": true
+        }
+      },
+      "properties": {},
+      "uid": {
+        "segments": [
+          "network",
+          "device",
+          "2699bbee"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "network",
+          "device"
+        ]
+      }
+    }
+  },
+  "network:device:10_0_1_2": {
+    "class": "org.eclipse.smarthome.core.thing.internal.ThingImpl",
+    "value": {
+      "label": "Network Device (10.0.1.2)",
+      "channels": [
+        {
+          "acceptedItemType": "Switch",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "10_0_1_2",
+              "online"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "online"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "10_0_1_2",
+              "time"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "time"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        }
+      ],
+      "configuration": {
+        "properties": {
+          "hostname": "10.0.1.2",
+          "refresh_interval": 60000.0,
+          "port": 0.0,
+          "retry": 1.0,
+          "timeout": 5000.0,
+          "use_system_ping": false
+        }
+      },
+      "properties": {},
+      "uid": {
+        "segments": [
+          "network",
+          "device",
+          "10_0_1_2"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "network",
+          "device"
+        ]
+      }
+    }
+  },
+  "network:device:10_0_1_4": {
+    "class": "org.eclipse.smarthome.core.thing.internal.ThingImpl",
+    "value": {
+      "label": "Network Device (10.0.1.4)",
+      "channels": [
+        {
+          "acceptedItemType": "Switch",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "10_0_1_4",
+              "online"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "online"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "10_0_1_4",
+              "time"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "time"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        }
+      ],
+      "configuration": {
+        "properties": {
+          "hostname": "10.0.1.4",
+          "refresh_interval": 60000.0,
+          "port": 0.0,
+          "retry": 1.0,
+          "timeout": 5000.0,
+          "use_system_ping": false
+        }
+      },
+      "properties": {},
+      "uid": {
+        "segments": [
+          "network",
+          "device",
+          "10_0_1_4"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "network",
+          "device"
+        ]
+      }
+    }
+  },
+  "network:device:10_0_1_30": {
+    "class": "org.eclipse.smarthome.core.thing.internal.ThingImpl",
+    "value": {
+      "label": "Network Device (10.0.1.30)",
+      "channels": [
+        {
+          "acceptedItemType": "Switch",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "10_0_1_30",
+              "online"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "online"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "10_0_1_30",
+              "time"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "time"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        }
+      ],
+      "configuration": {
+        "properties": {
+          "hostname": "10.0.1.30",
+          "refresh_interval": 60000.0,
+          "port": 0.0,
+          "retry": 1.0,
+          "timeout": 5000.0,
+          "use_system_ping": false
+        }
+      },
+      "properties": {},
+      "uid": {
+        "segments": [
+          "network",
+          "device",
+          "10_0_1_30"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "network",
+          "device"
+        ]
+      }
+    }
+  },
+  "yahooweather:weather:65b57fde": {
+    "class": "org.eclipse.smarthome.core.thing.internal.ThingImpl",
+    "value": {
+      "label": "Weather Information",
+      "channels": [
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "yahooweather",
+              "weather",
+              "65b57fde",
+              "temperature"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "yahooweather",
+              "temperature"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "yahooweather",
+              "weather",
+              "65b57fde",
+              "humidity"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "yahooweather",
+              "humidity"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "yahooweather",
+              "weather",
+              "65b57fde",
+              "pressure"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "yahooweather",
+              "pressure"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        }
+      ],
+      "configuration": {
+        "properties": {
+          "refresh": 60.0,
+          "location": 349859.0
+        }
+      },
+      "properties": {},
+      "uid": {
+        "segments": [
+          "yahooweather",
+          "weather",
+          "65b57fde"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "yahooweather",
+          "weather"
+        ]
+      },
+      "location": ""
+    }
+  },
+  "network:device:10_0_1_13": {
+    "class": "org.eclipse.smarthome.core.thing.internal.ThingImpl",
+    "value": {
+      "label": "Network Device (10.0.1.13)",
+      "channels": [
+        {
+          "acceptedItemType": "Switch",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "10_0_1_13",
+              "online"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "online"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "10_0_1_13",
+              "time"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "time"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        }
+      ],
+      "configuration": {
+        "properties": {
+          "hostname": "10.0.1.13",
+          "refresh_interval": 60000.0,
+          "port": 0.0,
+          "retry": 1.0,
+          "timeout": 5000.0,
+          "use_system_ping": false
+        }
+      },
+      "properties": {},
+      "uid": {
+        "segments": [
+          "network",
+          "device",
+          "10_0_1_13"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "network",
+          "device"
+        ]
+      }
+    }
+  },
+  "network:device:10_0_1_14": {
+    "class": "org.eclipse.smarthome.core.thing.internal.ThingImpl",
+    "value": {
+      "label": "Network Device (10.0.1.14)",
+      "channels": [
+        {
+          "acceptedItemType": "Switch",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "10_0_1_14",
+              "online"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "online"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        },
+        {
+          "acceptedItemType": "Number",
+          "kind": "STATE",
+          "uid": {
+            "segments": [
+              "network",
+              "device",
+              "10_0_1_14",
+              "time"
+            ]
+          },
+          "channelTypeUID": {
+            "segments": [
+              "network",
+              "time"
+            ]
+          },
+          "configuration": {
+            "properties": {}
+          },
+          "properties": {},
+          "defaultTags": []
+        }
+      ],
+      "configuration": {
+        "properties": {
+          "hostname": "10.0.1.14",
+          "refresh_interval": 60000.0,
+          "port": 0.0,
+          "retry": 1.0,
+          "timeout": 5000.0,
+          "use_system_ping": false
+        }
+      },
+      "properties": {},
+      "uid": {
+        "segments": [
+          "network",
+          "device",
+          "10_0_1_14"
+        ]
+      },
+      "thingTypeUID": {
+        "segments": [
+          "network",
+          "device"
+        ]
+      }
+    }
+  }
+}

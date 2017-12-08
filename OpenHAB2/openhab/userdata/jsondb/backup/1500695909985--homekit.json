@@ -1,0 +1,18 @@
+{
+  "privateKey": {
+    "class": "java.lang.String",
+    "value": "dp17FsAVgcZw5gzbAkqSQQ31Dw4cWscdOnxChy7yz9s\u003d"
+  },
+  "salt": {
+    "class": "java.lang.String",
+    "value": "-16509390040350957357823388229207902731"
+  },
+  "user_8e:ea:8b:7b:e5:d7B885E541-F026-449D-A534-7F6E3A1E8251": {
+    "class": "java.lang.String",
+    "value": "o5S5iF92c3THumSuXI6gwhSw5umeALtjWJ88esBQ/KQ\u003d"
+  },
+  "mac": {
+    "class": "java.lang.String",
+    "value": "8e:ea:8b:7b:e5:d7"
+  }
+}

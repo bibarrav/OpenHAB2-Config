@@ -1,0 +1,142 @@
+{
+  "WeatherInformation_Humidity": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Humidity",
+      "category": "Humidity"
+    }
+  },
+  "LocalComputer_Memory_Available": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Available",
+      "category": ""
+    }
+  },
+  "NetworkDevice10011_Online": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Switch",
+      "tags": [],
+      "label": "Online",
+      "category": "Switch"
+    }
+  },
+  "WeatherInformation_Pressure": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Pressure",
+      "category": "Pressure"
+    }
+  },
+  "LocalComputer_Storage_Available": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Available",
+      "category": ""
+    }
+  },
+  "WeatherInformation_Temperature": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Temperature",
+      "category": "Temperature"
+    }
+  },
+  "LocalComputer_Network_MacAddress": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "String",
+      "tags": [],
+      "label": "Mac address",
+      "category": ""
+    }
+  },
+  "OfficeLight": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Switch",
+      "tags": [],
+      "label": "OfficeLight",
+      "category": "Switch"
+    }
+  },
+  "RootRouter10011_Time": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Time",
+      "category": "Number"
+    }
+  },
+  "MySensorsGateway_Online": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Switch",
+      "tags": [],
+      "label": "Online",
+      "category": "Switch"
+    }
+  },
+  "LocalComputer_Swap_Available": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Available",
+      "category": ""
+    }
+  },
+  "LocalComputer_Cpu_Load": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Load",
+      "category": ""
+    }
+  },
+  "LocalComputer_Battery_RemainingCapacity": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Remaining capacity",
+      "category": ""
+    }
+  },
+  "MySensorsGateway_Time": {
+    "class": "org.eclipse.smarthome.core.items.ManagedItemProvider$PersistedItem",
+    "value": {
+      "groupNames": [],
+      "itemType": "Number",
+      "tags": [],
+      "label": "Time",
+      "category": "Number"
+    }
+  }
+}

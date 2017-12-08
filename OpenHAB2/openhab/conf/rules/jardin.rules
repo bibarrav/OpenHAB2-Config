@@ -1,0 +1,169 @@
+import java.text.SimpleDateFormat
+import java.util.Date
+
+rule "Jardin_Temperatura Max/Min"
+when
+	Item Jardin_Temperatura changed
+then	
+	
+	postUpdate(Jardin_Temperatura_Max, Jardin_Temperatura.maximumSince(now.withTimeAtStartOfDay).state)
+	postUpdate(Jardin_Temperatura_Min, Jardin_Temperatura.minimumSince(now.withTimeAtStartOfDay).state)
+end
+
+rule "Jardin_Humedad Max/Min"
+when
+	Item Jardin_Humedad changed
+then	
+	postUpdate(Jardin_Humedad_Max, Jardin_Humedad.maximumSince(now.withTimeAtStartOfDay).state)
+	postUpdate(Jardin_Humedad_Min, Jardin_Humedad.minimumSince(now.withTimeAtStartOfDay).state)
+end
+
+rule "Jardin_TemperaturaRTC Max/Min"
+when
+	Item Jardin_TemperaturaRTC changed
+then	
+	postUpdate(Jardin_TemperaturaRTC_Max, Jardin_TemperaturaRTC.maximumSince(now.withTimeAtStartOfDay).state)
+	postUpdate(Jardin_TemperaturaRTC_Min, Jardin_TemperaturaRTC.minimumSince(now.withTimeAtStartOfDay).state)
+end
+
+rule "Jardin_Humidex Max/Min"
+when
+        Item Humidex_Jardin changed
+then
+        postUpdate(Humidex_Jardin_Max, Humidex_Jardin.maximumSince(now.withTimeAtStartOfDay).state)
+        postUpdate(Humidex_Jardin_Min, Humidex_Jardin.minimumSince(now.withTimeAtStartOfDay).state)
+end
+
+// Humidex Rule
+rule "Humidex calculation"
+when
+  Item Jardin_Temperatura changed or
+  Item Jardin_Humedad changed
+then
+  var Number T = Jardin_Temperatura.state as DecimalType
+  var Number H = Jardin_Humedad.state as DecimalType
+  var Number x = 7.5 * T/(237.7 + T)
+  var Number e = 6.112 * Math::pow(10, x.doubleValue) * H/100
+  var Number humidex = T + (new Double(5) / new Double(9)) * (e - 10)
+  postUpdate(Humidex_Jardin, humidex)
+end
+
+// Creates an item that stores the last update time of this item
+rule "Jardin_Temperatura LastUpdate"
+when
+  Item Jardin_Temperatura received update
+then
+  postUpdate(Jardin_Temperatura_LastUpdate, new DateTimeType())
+end
+
+rule "Jardin_Humedad LastUpdate"
+when
+  Item Jardin_Humedad received update
+then
+  postUpdate(Jardin_Humedad_LastUpdate, new DateTimeType())
+end
+
+rule "Jardin_TemperaturaRTC LastUpdate"
+when
+  Item Jardin_TemperaturaRTC received update
+then
+  postUpdate(Jardin_TemperaturaRTC_LastUpdate, new DateTimeType())
+end
+
+// Procesar informacion de reloj para variables usadas por separado en el sitemap Jardin
+rule "RiegoTimer1 Update"
+when
+  Item RiegoTimer1 changed
+then
+	var String[] TimeInfo
+	TimeInfo=RiegoTimer1.state.toString.split(":")
+	postUpdate(RiegoTimer1Hora, TimeInfo.get(0))
+	postUpdate(RiegoTimer1Minuto, TimeInfo.get(1))
+end
+
+// Procesar informacion de reloj para variables usadas por separado en el sitemap Jardin
+rule "RiegoTimer2 Update"
+when
+  Item RiegoTimer2 changed
+then
+	var String[] TimeInfo
+	TimeInfo=RiegoTimer2.state.toString.split(":")
+	postUpdate(RiegoTimer2Hora, TimeInfo.get(0))
+	postUpdate(RiegoTimer2Minuto, TimeInfo.get(1))
+end
+
+// Reglas de procesamiento para envio actualizacion de configuracion a Timers 
+rule "RiegoTimer1 Prepare Update"
+when
+	Item RiegoTimer1Hora changed or Item RiegoTimer1Minuto changed
+then
+	var String txtTimer1
+	if (RiegoTimer1Hora.state > 9 && RiegoTimer1Minuto.state > 9) {
+		txtTimer1 = (RiegoTimer1Hora.state as DecimalType).intValue + ":" + (RiegoTimer1Minuto.state as DecimalType).intValue }
+	else if (RiegoTimer1Hora.state > 9) {
+		txtTimer1 = (RiegoTimer1Hora.state as DecimalType).intValue + ":" + "0" + (RiegoTimer1Minuto.state as DecimalType).intValue }
+	else if (RiegoTimer1Minuto.state > 9) {
+		txtTimer1 = "0" + (RiegoTimer1Hora.state as DecimalType).intValue + ":" + (RiegoTimer1Minuto.state as DecimalType).intValue }
+	else {
+		txtTimer1 = "0" + (RiegoTimer1Hora.state as DecimalType).intValue + ":" + "0" + (RiegoTimer1Minuto.state as DecimalType).intValue }
+	postUpdate(Timer1Guardar, txtTimer1)
+end
+rule "RiegoTimer1 Send Command"
+when
+	Item Timer1GuardarButton received command
+then
+	Timer1Guardar.sendCommand(Timer1Guardar.state.toString)
+	postUpdate(Timer1GuardarButton, OFF)
+end
+
+//Enviar configuracion de Timers
+rule "RiegoTimer2 Prepare Update"
+when
+	Item RiegoTimer2Hora changed or Item RiegoTimer2Minuto changed
+then
+	var String txtTimer2
+	if (RiegoTimer2Hora.state > 9 && RiegoTimer2Minuto.state > 9) {
+		txtTimer2 = (RiegoTimer2Hora.state as DecimalType).intValue + ":" + (RiegoTimer2Minuto.state as DecimalType).intValue }
+	else if (RiegoTimer2Hora.state > 9) {
+		txtTimer2 = (RiegoTimer2Hora.state as DecimalType).intValue + ":" + "0" + (RiegoTimer2Minuto.state as DecimalType).intValue }
+	else if (RiegoTimer2Minuto.state > 9) {
+		txtTimer2 = "0" + (RiegoTimer2Hora.state as DecimalType).intValue + ":" + (RiegoTimer2Minuto.state as DecimalType).intValue }
+	else {
+		txtTimer2 = "0" + (RiegoTimer2Hora.state as DecimalType).intValue + ":" + "0" + (RiegoTimer2Minuto.state as DecimalType).intValue }
+	postUpdate(Timer2Guardar, txtTimer2)
+end
+rule "RiegoTimer2 Send Command"
+when
+	Item Timer2GuardarButton received command
+then
+	Timer2Guardar.sendCommand(Timer2Guardar.state.toString)
+	postUpdate(Timer2GuardarButton,OFF)
+end
+
+rule "RiegoReloj SYNC"
+when
+	Item RiegoRelojSyncFlag changed to ON
+then
+        var SimpleDateFormat DATE_FORMATTER  = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+	var String DT = DATE_FORMATTER.format(new Date())
+	RiegoRelojSync.sendCommand(DT)
+	postUpdate(RiegoRelojSync, DT)
+	postUpdate(RiegoRelojSyncFlag, OFF)
+end
+
+rule "Notify Riego Jardin Status ON"
+when
+	Item RiegoRegar changed to ON
+then
+	sendBroadcastNotification("Ciclo de riego iniciado!")
+	sendLogNotification("Ciclo de riego iniciado!")
+end
+
+rule "Notify Riego Jardin Status Off"
+when
+	Item RiegoRegar changed from ON to OFF
+then
+	sendBroadcastNotification("Ciclo de riego finalizado!")
+	sendLogNotification("Ciclo de riego finalizado!")
+end
+

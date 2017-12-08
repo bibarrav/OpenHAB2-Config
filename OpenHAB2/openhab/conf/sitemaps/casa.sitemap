@@ -1,0 +1,78 @@
+sitemap casa label="Casa"
+{
+   Frame label="Zonas" {
+   	Group item=TercerPiso label="Tercer Piso" icon="firstfloor"
+   	Group item=SegundoPiso label="Segundo Piso" icon="groundfloor"
+   	Group item=PrimerPiso label="Primer Piso" icon="cellar"
+   	Group item=Jardin label="Jardin" icon="garden"
+   }
+   Frame label="Clima" {
+      Text item=Jardin_Temperatura valuecolor=[Jardin_Temperatura_LastUpdate=="NULL"="lightgray",Jardin_Temperatura_LastUpdate>90="lightgray",>25="orange",>15="green",>5="orange",<=5="blue"] {
+	Frame label="Indicadores Temperatura Jardin" {
+		Text item=Jardin_Temperatura_Max valuecolor=[>25="orange",>15="green",>5="orange",<=5="blue"]
+		Text item=Jardin_Temperatura_Min valuecolor=[>25="orange",>15="green",>5="orange",<=5="blue"]
+		Text item=Jardin_Temperatura_LastUpdate valuecolor=[Jardin_Temperatura_LastUpdate>120="orange", Jardin_Temperatura_LastUpdate>300="red"]
+	}
+        Frame label="Temperatura Historica Jardin" {
+           Switch item=Jardin_Temperatura_Period label="Periodo a Graficar" icon="pie" mappings=[0="Día", 1="Semana", 2="Mes"]
+           Chart item=TempChart period=D refresh=120000 visibility=[Jardin_Temperatura_Period==0, Jardin_Temperatura_Period=="NULL"]
+           Chart item=TempChart period=W refresh=120000 visibility=[Jardin_Temperatura_Period==1]
+           Chart item=TempChart period=M refresh=120000 visibility=[Jardin_Temperatura_Period==2]
+            }
+         }
+       Text item=Jardin_Humedad valuecolor=[Jardin_Humedad_LastUpdate=="NULL"="lightgray",Jardin_Humedad_LastUpdate>90="lightgray",>25="orange",>15="green",>5="orange",<=5="blue"] {
+	Frame label="Indicadores Humedad Jardin"{
+		Text item=Jardin_Humedad_Max valuecolor=[>25="orange",>15="green",>5="orange",<=5="blue"]
+		Text item=Jardin_Humedad_Min valuecolor=[>25="orange",>15="green",>5="orange",<=5="blue"]
+		Text item=Jardin_Humedad_LastUpdate valuecolor=[Jardin_Humedad_LastUpdate>120="orange", Jardin_Humedad_LastUpdate>300="red"]
+	}
+        Frame label="Humedad Historica Jardin" {
+           Switch item=Jardin_Humedad_Period label="Periodo a Graficar" icon="pie" mappings=[0="Día", 1="Semana", 2="Mes"] 
+           Chart item=HumChart period=D refresh=120000 visibility=[Jardin_Humedad_Period==0, Jardin_Humedad_Period=="NULL"]
+           Chart item=HumChart period=W refresh=120000 visibility=[Jardin_Humedad_Period==1]
+           Chart item=HumChart period=M refresh=120000 visibility=[Jardin_Humedad_Period==2]
+            }
+         }  
+       Text item=Jardin_TemperaturaRTC valuecolor=[Jardin_TemperaturaRTC_LastUpdate=="NULL"="lightgray",Jardin_TemperaturaRTC_LastUpdate>90="lightgray",>25="orange",>15="green",>5="orange",<=5="blue"] {
+	Frame label="Indicadores Temperatura-RTC Jardin"{
+		Text item=Jardin_TemperaturaRTC_Max valuecolor=[>25="orange",>15="green",>5="orange",<=5="blue"]
+		Text item=Jardin_TemperaturaRTC_Min valuecolor=[>25="orange",>15="green",>5="orange",<=5="blue"]
+		Text item=Jardin_TemperaturaRTC_LastUpdate valuecolor=[Jardin_TemperaturaRTC_LastUpdate>120="orange", Jardin_TemperaturaRTC_LastUpdate>300="red"]
+	}
+        Frame label="Temperatura-RTC Historica Jardin" {
+           Switch item=Jardin_TemperaturaRTC_Period label="Periodo a Graficar" icon="pie" mappings=[0="Día", 1="Semana", 2="Mes"]
+           Chart item=TrtcChart period=D refresh=120000 visibility=[Jardin_TemperaturaRTC_Period==0, Jardin_TemperaturaRTC_Period=="NULL"]
+           Chart item=TrtcChart period=W refresh=120000 visibility=[Jardin_TemperaturaRTC_Period==1]
+           Chart item=TrtcChart period=M refresh=120000 visibility=[Jardin_TemperaturaRTC_Period==2]
+            }
+         }
+	Text item=Humidex_Jardin valuecolor=[Humidex_Jardin=="NULL"="lightgray",Humidex_Jardin>30="red",>25="orange",>15="green",>5="lightblue",<=5="blue"] {
+           Frame label="Indicadores Sensacion Termica Jardin"{
+               Text item=Humidex_Jardin_Max valuecolor=[>30="red",>25="orange",>15="green",>5="lightblue",<=5="blue"]
+               Text item=Humidex_Jardin_Min valuecolor=[>30="red",>25="orange",>15="green",>5="lightblue",<=5="blue"]
+        }
+        Frame label="Sensacion Termica Historica Jardin" {
+           Switch item=Humidex_Jardin_Period label="Periodo a Graficar" icon="pie" mappings=[0="Día", 1="Semana", 2="Mes"]
+	   Chart item=HdxChart period=D refresh=120000 visibility=[Humidex_Jardin_Period==0, Humidex_Jardin_Period=="NULL"]
+           Chart item=HdxChart period=W refresh=120000 visibility=[Humidex_Jardin_Period==1]
+           Chart item=HdxChart period=M refresh=120000 visibility=[Humidex_Jardin_Period==2]
+            }
+         }
+       Text item=TempPasillo2doPiso
+       Text item=HumPasillo2doPiso
+       Text item=TempPasillo3erPiso
+       Text item=HumPasillo3erPiso
+
+   }
+   Frame label="Iluminacion" {
+	Switch item=gLucesTercerPiso label="Luces Tercer Piso" icon="light"
+        Group item=gLucesTercerPiso
+	Switch item=gLucesSegundoPiso label="Luces Segundo Piso" icon="light"
+	Group item=gLucesSegundoPiso
+	Switch item=gLucesPrimerPiso label="Luces Primer Piso" icon="light"
+	Group item=gLucesPrimerPiso
+   }
+   Frame label="Accesos" {
+	Switch item=BotonPortonFunciones icon="garagedoor" mappings=[ON="Accion", OpenA="5seg", OpenB="10seg"]
+   }
+}
