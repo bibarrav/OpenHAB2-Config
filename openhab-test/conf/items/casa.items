@@ -1,0 +1,74 @@
+Group All
+Group PrimerPiso (All)
+Group SegundoPiso (All)
+Group TercerPiso (All)
+Group Clima (All)
+Group Jardin (All)
+Group Status (All)
+Group TempChart
+Group HumChart
+Group TrtcChart
+Group HdxChart
+
+/* Grupo Primer Piso */
+Group PP_Living 	"Living" 		<sofa>	 	(PrimerPiso)
+Group PP_Comedor 	"Comedor" 		<diningtable>	 (PrimerPiso)
+Group PP_Cosina 	"Cosina" 		<kitchen> 	(PrimerPiso)
+Group PP_Logia	 	"Logia" 		<washingmachine> 	(PrimerPiso)
+Group PP_Bano	 	"Baño" 			<bath> 		(PrimerPiso)
+Group:Switch:OR(ON,OFF) gLucesPrimerPiso "Luces Primer Piso [(%d)]" <light>
+/* Comedor */
+Switch LuzComedor "Luz de Comedor" <light> (PP_Comedor,gLucesPrimerPiso) [ "Lighting" ] {mqtt="<[mqttbroker:stat/sonoff_F8952A/POWER:state:default],>[mqttbroker:cmnd/sonoff_F8952A/power:command:*:default]"}
+/* Pasillo */
+Switch LuzPasillo1erPiso "Luz de Pasillo" <light> (PrimerPiso,gLucesPrimerPiso) [ "Lighting" ] {mqtt="<[mqttbroker:stat/sonoff_F987B4/POWER:state:default],>[mqttbroker:cmnd/sonoff_F987B4/power:command:*:default]"}
+
+
+/* Grupo Segundo Piso */
+Group SP_Bano 		"Baño" 			<bath> 		(SegundoPiso)
+Group SP_Oficina 	"Oficina" 		<office> 	(SegundoPiso)
+Group SP_Dormitorio	"Dormitorio"	<bedroom> 	(SegundoPiso)
+Group SP_Estar 		"Sala de Estar"	<sofa>	 	(SegundoPiso)
+Group:Switch:OR(ON,OFF) gLucesSegundoPiso "Luces Segundo Piso [(%d)]" <light>
+/* Oficina */
+Switch LuzOficina "Luz de Oficina" <light> (SP_Oficina,gLucesSegundoPiso) [ "Lighting" ] {mqtt="<[mqttbroker:stat/sonoff_9E0AC5/POWER:state:default],>[mqttbroker:cmnd/sonoff_9E0AC5/power:command:*:default]"}
+Number TempOficina "Temperatura de Oficina [%d °C]" <temperature> (SP_Oficina) [ "CurrentTemperature" ] {mqtt="<[mqttbroker:OpenHAB/WeMos01/Office-temp:state:default]"}
+Number HumOficina "Humedad de Oficina [%d %%]" <humidity> (SP_Oficina) [ "CurrentHumidity" ] {mqtt="<[mqttbroker:OpenHAB/WeMos01/Office-hum:state:default]"}
+/* Dormitorio Principal */
+Switch LuzDormitorio "Luz de Dormitorio" <light> (SP_Dormitorio,gLucesSegundoPiso) [ "Lighting" ] {mqtt="<[mqttbroker:stat/sonoff_F9865C/POWER:state:default],>[mqttbroker:cmnd/sonoff_F9865C/power:command:*:default]"}
+Number TempDormitorio "Temperatura de Dormitorio [%d °C]" <temperature> (SP_Dormitorio) [ "CurrentTemperature" ] {mqtt="<[mqttbroker:tele/wemos_3A1045/SENSOR:state:JSONPATH($.DHT11.Temperature)]"}
+Number HumDormitorio "Humedad de Dormitorio [%d %%]" <humidity> (SP_Dormitorio) [ "CurrentHumidity" ] {mqtt="<[mqttbroker:tele/wemos_3A1045/SENSOR:state:JSONPATH($.DHT11.Humidity)]"}
+/* Sala de Estar */
+Switch LuzSalaEstar2doPiso "Luz de Sala de Estar" <light> (SP_Estar,gLucesSegundoPiso) [ "Lighting" ] {mqtt="<[mqttbroker:stat/sonoff_F49A92/POWER:state:default],>[mqttbroker:cmnd/sonoff_F49A92/power:command:*:default]"}
+Switch LampSalaEstar2doPiso "Lampara de Sala de Estar" <light> (SP_Estar,gLucesSegundoPiso) [ "Lighting" ] {mqtt="<[mqttbroker:stat/sonoff_173CEF/POWER:state:default],>[mqttbroker:cmnd/sonoff_173CEF/power:command:*:default]"}
+/* Pasillo */
+Switch LuzPasillo2doPiso "Luz de Pasillo" <light> (SegundoPiso,gLucesSegundoPiso) [ "Lighting" ] {mqtt="<[mqttbroker:stat/wemos_3A0FE2/POWER:state:default],>[mqttbroker:cmnd/wemos_3A0FE2/power:command:*:default]"}
+Number TempPasillo2doPiso "Temperatura de Pasillo Piso 2 [%d °C]" <temperature> (SegundoPiso) [ "CurrentTemperature" ] {mqtt="<[mqttbroker:tele/wemos_3A0FE2/SENSOR:state:JSONPATH($.DHT11.Temperature)]"}
+Number HumPasillo2doPiso "Humedad de Pasillo Piso 2 [%d %%]" <humidity> (SegundoPiso) [ "CurrentHumidity" ] {mqtt="<[mqttbroker:tele/wemos_3A0FE2/SENSOR:state:JSONPATH($.DHT11.Humidity)]"}
+/* Escaleras */
+Switch LuzEscaleras2doPiso "Luz de Escaleras" <light> (SegundoPiso,gLucesSegundoPiso) [ "Lighting" ] {mqtt="<[mqttbroker:stat/sonoff_F98F1C/POWER:state:default],>[mqttbroker:cmnd/sonoff_F98F1C/power:command:*:default]"}
+
+
+/* Grupo Tercer Piso */
+Group TP_Bano 		"Baño"	 		<bath> 		(TercerPiso)
+Group TP_Estar	 	"Sala de Estar" <sofa>	 	(TercerPiso)
+Group TP_Javiera	"Habitacion Javiera" 	<bedroom> 	(TercerPiso)
+Group TP_Vicente 	"Habitacion Vicente"	<bedroom> 	(TercerPiso)
+Group:Switch:OR(ON,OFF) gLucesTercerPiso "Luces Tercer Piso [(%d)]" <light>
+/* Sala de Estar */
+Switch LuzSalaEstar3erPiso "Luz de Sala de Estar" <light> (TP_Estar,gLucesTercerPiso) [ "Lighting" ] {mqtt="<[mqttbroker:stat/sonoff_A87EC7/POWER:state:default],>[mqttbroker:cmnd/sonoff_A87EC7/power:command:*:default]"}
+/* Pasillo */
+Switch LuzPasillo3erPiso "Luz de Pasillo" <light> (TercerPiso,gLucesTercerPiso) [ "Lighting" ] {mqtt="<[mqttbroker:stat/wemos_3A1045/POWER:state:default],>[mqttbroker:cmnd/wemos_3A1045/power:command:*:default]"}
+Number TempPasillo3erPiso "Temperatura de Pasillo Piso 3 [%d °C]" <temperature> (TercerPiso) [ "CurrentTemperature" ] {mqtt="<[mqttbroker:tele/wemos_3A1045/SENSOR:state:JSONPATH($.DHT11.Temperature)]"}
+Number HumPasillo3erPiso "Humedad de Pasillo Piso 3 [%d %%]" <humidity> (TercerPiso) [ "CurrentHumidity" ] {mqtt="<[mqttbroker:tele/wemos_3A1045/SENSOR:state:JSONPATH($.DHT11.Humidity)]"}
+/* Escaleras */
+Switch LuzEscaleras3erPiso "Luz de Escaleras" <light> (TercerPiso,gLucesTercerPiso) [ "Lighting" ] {mqtt="<[mqttbroker:stat/sonoff_F99008/POWER:state:default],>[mqttbroker:cmnd/sonoff_F99008/power:command:*:default]"}
+/* Dormitorio Javiera */
+Switch LuzDormitorioJaviera "Luz de Dormitorio" <light> (TP_Javiera,gLucesTercerPiso) [ "Lighting" ] {mqtt="<[mqttbroker:stat/sonoff_A4B3F5/POWER:state:default],>[mqttbroker:cmnd/sonoff_A4B3F5/power:command:*:default]"}
+/* Dormitorio Vicente */
+Switch LuzDormitorioVicente "Luz de Dormitorio" <light> (TP_Vicente,gLucesTercerPiso) [ "Lighting" ] {mqtt="<[mqttbroker:stat/sonoff_F9844A/POWER:state:default],>[mqttbroker:cmnd/sonoff_F9844A/power:command:*:default]"}
+
+
+/*Accesos*/
+Switch BotonPorton "Porton Electrico" <switch> (Jardin) [ "Switchable" ] {mqtt="<[mqttbroker:mygateway1-out/2/1/1/0/2:state:MAP(switch2.map)],>[mqttbroker:mygateway1-in/2/1/1/0/2:command:ON:0]"}
+String BotonPortonFunciones "Porton Electrico"
+

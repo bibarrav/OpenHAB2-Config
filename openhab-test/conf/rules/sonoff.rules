@@ -1,0 +1,61 @@
+// Work with a list of selected Sonoff modules for Test
+val sonoff_device_ids_test = newArrayList(
+    "sonoff_9E0AC5"
+)
+
+// OR
+// Work with the grouptopic, addressing ALL modules at once
+//val sonoff_device_ids = newArrayList("sonoffs")
+
+rule "Sonoff Maintenance Test"
+when
+    Item Sonoff_Action_Test received command
+then 
+    logInfo("sonoff.rules", "Sonoff Maintenance on Test device: " + receivedCommand)
+    for (String device_id : sonoff_device_ids_test) {
+        switch (receivedCommand) {
+            case "restart" :
+                publish("mqttbroker", "cmnd/" + device_id + "/restart", "1") 
+            case "queryFW" :
+                publish("mqttbroker", "cmnd/" + device_id + "/status", "2")
+            case "upgrade" : {
+                //publish("mqttbroker", "cmnd/" + device_id + "/otaurl", "http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin")
+		var String results = executeCommandLine("wget http://sonoff.maddox.co.uk/tasmota/sonoff.ino.bin -O /openhab/conf/html/sonoff.ino.bin",30000)
+                logInfo("sonoff.rules", "Download New FW Job Results: " + results)
+		publish("mqttbroker", "cmnd/" + device_id + "/otaurl", "http://10.0.1.13:8088/static/sonoff.ino.bin")
+                publish("mqttbroker", "cmnd/" + device_id + "/upgrade", "1")
+            }
+        }
+    }
+    Sonoff_Action_Test.postUpdate(NULL)
+end
+
+rule "Sonoff Maintenance"
+when
+    Item Sonoff_Action received command
+then 
+    logInfo("sonoff.rules", "Sonoff Maintenance on all devices: " + receivedCommand)
+       switch (receivedCommand) {
+            case "restart" : {
+                publish("mqttbroker", "cmnd/sonoffs/restart", "1")
+		publish("mqttbroker", "cmnd/wemoss/restart", "1")
+	    }
+            case "queryFW" : {
+                publish("mqttbroker", "cmnd/sonoffs/status", "2")
+		publish("mqttbroker", "cmnd/wemoss/status", "2")
+	    }
+            case "upgrade" : {
+                publish("mqttbroker", "cmnd/sonoffs/otaurl", "http://10.0.1.13:8088/static/sonoff.ino.bin")
+                publish("mqttbroker", "cmnd/sonoffs/upgrade", "1")
+            }
+        }
+    Sonoff_Action.postUpdate(NULL)
+end
+
+rule "Sonoff Reachability Status Notification"
+when
+	Item gReachable changed from ON to UNDEF
+then
+	logInfo("sonoff.rules", "Sonoff Reachability Status Notification!!! ")
+	sendNotification("bibarrav@hotmail.com","Alerta: Dispositivo no alcanzable!")
+end

@@ -1,0 +1,22 @@
+{
+  "user_62:32:bd:74:4:15B885E541-F026-449D-A534-7F6E3A1E8251": {
+    "class": "java.lang.String",
+    "value": "o5S5iF92c3THumSuXI6gwhSw5umeALtjWJ88esBQ/KQ\u003d"
+  },
+  "privateKey": {
+    "class": "java.lang.String",
+    "value": "Jq41gfPVcbo2A7LoMGoaOsGGz9cVt5GW/VEsvUoY+HA\u003d"
+  },
+  "salt": {
+    "class": "java.lang.String",
+    "value": "-110018974510323065985658948996438441663"
+  },
+  "mac": {
+    "class": "java.lang.String",
+    "value": "62:32:bd:74:4:15"
+  },
+  "user_62:32:bd:74:4:151B1074A4-AF4E-405C-A48C-9D5413490F3A": {
+    "class": "java.lang.String",
+    "value": "5rDnbvNqyLG843T9IhxAzqGpPTrFwU8Or1ANcrZyIGA\u003d"
+  }
+}

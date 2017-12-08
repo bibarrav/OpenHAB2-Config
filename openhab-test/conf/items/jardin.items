@@ -1,0 +1,54 @@
+Switch UsarTimer1 "Usar Timer 1" <switch> [ "Switchable" ] {mqtt="<[mqttbroker:mygateway1-out/3/17/1/0/2:state:MAP(switch.map)],>[mqttbroker:mygateway1-in/3/17/1/0/2:command:ON:1],>[mqttbroker:mygateway1-in/3/17/1/0/2:command:OFF:0"}
+Switch UsarTimer2 "Usar Timer 2" <switch> [ "Switchable" ] {mqtt="<[mqttbroker:mygateway1-out/3/19/1/0/2:state:MAP(switch.map)],>[mqttbroker:mygateway1-in/3/19/1/0/2:command:ON:1],>[mqttbroker:mygateway1-in/3/19/1/0/2:command:OFF:0"}
+Number RiegoModo "Modo Riego" <rain> {mqtt="<[mqttbroker:mygateway1-out/3/14/1/0/2:state:default],>[mqttbroker:mygateway1-in/3/14/1/0/2:command:1:1],>[mqttbroker:mygateway1-in/3/14/1/0/2:command:0:0"}
+Number RiegoPrueba "Prueba Riego" <rain> {mqtt="<[mqttbroker:mygateway1-out/3/13/1/0/2:state:default],>[mqttbroker:mygateway1-in/3/13/1/0/2:command:1:1],>[mqttbroker:mygateway1-in/3/13/1/0/2:command:0:0"}
+Switch RiegoRegar "Riego" <rain> (Jardin) [ "Switchable" ] {mqtt="<[mqttbroker:mygateway1-out/3/21/1/0/2:state:MAP(switch.map)],>[mqttbroker:mygateway1-in/3/21/1/0/2:command:ON:1],>[mqttbroker:mygateway1-in/3/21/1/0/2:command:OFF:0"}
+Number RiegoZonas "Zonas [%d]" <rain> {mqtt="<[mqttbroker:mygateway1-out/3/12/1/0/48:state:default],>[mqttbroker:mygateway1-in/3/12/1/0/48:command:*:default]"}
+Number RiegoDuracion "Duracion (Segs) [%d]" <clock> {mqtt="<[mqttbroker:mygateway1-out/3/11/1/0/48:state:default],>[mqttbroker:mygateway1-in/3/11/1/0/48:command:*:default]"}
+Switch RiegoRelojSyncFlag "Sincronizar Reloj" {mqtt="<[mqttbroker:openHAB/Jardin/RiegoEstadoRelojSync:state:MAP(switch.map)]"}
+String RiegoRelojSync "Ultimo Sync [%s]" {mqtt=">[mqttbroker:mygateway1-in/3/15/1/0/47:command:*:default]"}
+
+Number RiegoRelojFechaDia "Dia [%d]" <calendar>
+Number RiegoRelojFechaMes "Mes [%d]" <calendar>
+Number RiegoRelojFechaAno "Año [%d]" <calendar>
+Number RiegoRelojHoraHora "Hora [%d]" <clock>
+Number RiegoRelojHoraMinuto "Minuto [%d]" <clock>
+Number RiegoTimer1Hora "Hora [%d]" <clock>
+Number RiegoTimer1Minuto "Minuto [%d]" <clock>
+Number RiegoTimer2Hora "Hora [%d]" <clock>
+Number RiegoTimer2Minuto "Minuto [%d]" <clock>
+
+String Timer1Guardar "[%s]" {mqtt=">[mqttbroker:mygateway1-in/3/16/1/0/47:command:*:default"}
+String Timer1GuardarButton "Guardar Configuracion" <settings>
+String Timer2Guardar "[%s]" {mqtt=">[mqttbroker:mygateway1-in/3/18/1/0/47:command:*:default"}
+String Timer2GuardarButton "Guardar Configuracion" <settings>
+
+Number Jardin_Temperatura "Temperatura Jardin [%.1f °C]" <temperature>	(Clima, Jardin, TempChart) [ "CurrentTemperature" ] {mqtt="<[mqttbroker:mygateway1-out/3/9/1/0/0:state:default]"} 
+Number Jardin_Temperatura_Period             "Periodo a Graficar"
+Number Jardin_Temperatura_Max "Temperatura Maxima de Hoy [%.1f °C]" <temperature> (TempChart)
+Number Jardin_Temperatura_Min "Temperatura Minima de Hoy [%.1f °C]" <temperature> (TempChart)
+DateTime Jardin_Temperatura_LastUpdate     "Ultima Actualizacion [%1$ta %1$tR]" <clock>
+Number Jardin_Humedad "Humedad Jardin [%.1f %%]" <humidity>	(Clima, Jardin, HumChart) [ "CurrentHumidity" ] {mqtt="<[mqttbroker:mygateway1-out/3/10/1/0/1:state:default]"}
+Number Jardin_Humedad_Period             "Periodo a Graficar"
+Number Jardin_Humedad_Max "Humedad Maxima de Hoy [%.1f %%]" <humidity> (HumChart)
+Number Jardin_Humedad_Min "Humedad Minima de Hoy [%.1f %%]" <humidity> (HumChart)
+DateTime Jardin_Humedad_LastUpdate     "Ultima Actualizacion [%1$ta %1$tR]" <clock>
+Number Jardin_TemperaturaRTC "Temperatura-RTC Jardin [%.1f °C]" <temperature>	(Jardin, Clima, TrtcChart) {mqtt="<[mqttbroker:mygateway1-out/3/20/1/0/0:state:default]"}
+Number Jardin_TemperaturaRTC_Period "Periodo a Graficar"
+Number Jardin_TemperaturaRTC_Max "Temperatura-RTC Maxima de Hoy [%.1f °C]" <temperature> (TrtcChart)
+Number Jardin_TemperaturaRTC_Min "Temperatura-RTC Minima de Hoy [%.1f °C]" <temperature> (TrtcChart)
+DateTime Jardin_TemperaturaRTC_LastUpdate     "Ultima Actualizacion [%1$ta %1$tR]" <clock>
+Number Humidex_Jardin "Sensacion Termica Jardin [%.1f °C]" <humidity> (HdxChart)
+Number Humidex_Jardin_Period "Periodo a Graficar"
+Number Humidex_Jardin_Max "Sensacion Termica Maxima Jardin [%.1f °C]" <humidity> (HdxChart)
+Number Humidex_Jardin_Min "Sensacion Termica Minima Jardin [%.1f °C]" <humidity> (HdxChart)
+
+String RiegoReloj "Reloj Riego [%s]" <calendar> (Jardin) {mqtt="<[mqttbroker:mygateway1-out/3/15/1/0/47:state:default]"}
+String RiegoTimer1 "Timer 1 [%s]" <clock> (Jardin) {mqtt="<[mqttbroker:mygateway1-out/3/16/1/0/47:state:default]"}
+String RiegoTimer2 "Timer 2 [%s]" <clock> (Jardin) {mqtt="<[mqttbroker:mygateway1-out/3/18/1/0/47:state:default]"}
+Switch RiegoZona1 "Riego Zona1" <rain> (Jardin) [ "Switchable" ] {mqtt="<[mqttbroker:mygateway1-out/3/1/1/0/2:state:MAP(switch2.map)]"}
+Switch RiegoZona2 "Riego Zona2" <rain> (Jardin) [ "Switchable" ] {mqtt="<[mqttbroker:mygateway1-out/3/2/1/0/2:state:MAP(switch2.map)]"}
+Switch RiegoZona3 "Riego Zona3" <rain> (Jardin) [ "Switchable" ] {mqtt="<[mqttbroker:mygateway1-out/3/3/1/0/2:state:MAP(switch2.map)]"}
+Switch RiegoZona4 "Riego Zona4" <rain> (Jardin) [ "Switchable" ] {mqtt="<[mqttbroker:mygateway1-out/3/4/1/0/2:state:MAP(switch2.map)]"}
+Switch RiegoDebug "Modo DEBUG" <switch> {mqtt="<[mqttbroker:mygateway1-out/3/22/1/0/2:state:MAP(switch.map)],>[mqttbroker:mygateway1-in/3/22/1/0/2:command:ON:1],>[mqttbroker:mygateway1-in/3/22/1/0/2:command:OFF:0]"}
+

@@ -1,0 +1,9 @@
+// persistence strategies have a name and a definition and are referred to in the "Items" section
+Strategies {
+	// for rrd charts, we need a cron strategy
+	everyMinute : "0 * * * * ?"
+}
+
+Items {
+	Jardin_Temperatura, Jardin_Temperatura_Max, Jardin_Temperatura_Min, TempChart, Jardin_Humedad, Jardin_Humedad_Max, Jardin_Humedad_Min, HumChart, Jardin_TemperaturaRTC, Jardin_TemperaturaRTC_Max, Jardin_TemperaturaRTC_Min, TrtcChart,RiegoZona*,Humidex_Jardin,Humidex_Jardin_Min,Humidex_Jardin_Max,HdxChart : strategy = everyMinute
+}

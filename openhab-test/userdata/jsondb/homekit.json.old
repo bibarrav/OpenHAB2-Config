@@ -1,0 +1,14 @@
+{
+  "privateKey": {
+    "class": "java.lang.String",
+    "value": "sdeVGRmWqKIoJ904Bu9CPDZs3d28vkGwJ/J8dAR1Yi4\u003d"
+  },
+  "salt": {
+    "class": "java.lang.String",
+    "value": "125614379595528673242231129983912581932"
+  },
+  "mac": {
+    "class": "java.lang.String",
+    "value": "ce:18:e7:7d:23:c7"
+  }
+}

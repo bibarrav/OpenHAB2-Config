@@ -10,3 +10,10 @@ uuid
 openhab/userdata/tmp/
 openhab/userdata/cache/
 openhab/userdata/dropbox/authfile.dbx
+openhab-test/userdata/tmp/
+openhab-test/userdata/cache/
+openhab-test/userdata/dropbox/authfile.dbx
+openhab.clean/userdata/tmp/
+openhab.clean/userdata/cache/
+openhab.clean/userdata/dropbox/authfile.dbx
+
