@@ -7,6 +7,6 @@ sonoff.ino.bin
 keystore
 secret
 uuid
-OpenHAB2/openhab/userdata/tmp/
-OpenHAB2/openhab/userdata/cache/
-OpenHAB2/openhab/userdata/dropbox/authfile.dbx
+openhab/userdata/tmp/
+openhab/userdata/cache/
+openhab/userdata/dropbox/authfile.dbx
