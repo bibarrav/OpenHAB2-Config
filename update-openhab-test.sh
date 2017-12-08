@@ -2,7 +2,7 @@
                                                                                                             
                                                                                                             
 #Update docker image, stop and  destroy existing container                                                  
-#docker pull openhab/openhab:2.2.0-snapshot-amd64                                                            
+docker pull openhab/openhab:2.2.0-snapshot-amd64                                                            
 docker stop openhab-test                                                                                    
 docker rm openhab-test                                                                                      
                                                                                                             
