@@ -1,0 +1,42 @@
+sitemap jardin label="Jardin"
+{
+    Frame label="Reloj Riego" {
+	Text item=RiegoReloj icon="clock" 
+	Text item=RiegoRelojSync icon="clock"
+	Switch item=RiegoRelojSyncFlag mappings=[ON="Sincronizar"]
+    }
+    Frame label="Temporizadores Riego" {
+        Text label="Timer 1 [%s]" item=RiegoTimer1 icon="clock" {
+            Frame label="Editar Timer 1" {
+                Setpoint item=RiegoTimer1Hora minValue=00 maxValue=23 step=1
+                Setpoint item=RiegoTimer1Minuto minValue=00 maxValue=55 step=5
+                Switch item=Timer1GuardarButton mappings=[1="Guardar"]
+            }
+        }
+        Switch item=UsarTimer1 label="Usar Timer 1"
+        Text label="Timer 2 [%s]" item=RiegoTimer2 icon="clock" {
+            Frame label="Editar Timer 2" {
+                Setpoint item=RiegoTimer2Hora minValue=0 maxValue=23 step=1
+                Setpoint item=RiegoTimer2Minuto minValue=0 maxValue=55 step=5
+		Switch item=Timer2GuardarButton mappings=[1="Guardar"]
+            }
+        }
+        Switch item=UsarTimer2 label="Usar Timer 2"
+    }
+    Frame label="Configuracion Riego" {
+        Text label="Duracion (Segs) [%s]" item=RiegoDuracion icon="clock" {
+            Frame label="Editar Duracion" {
+                Setpoint item=RiegoDuracion minValue=1 maxValue=10 step=1
+            }
+        }
+        Text label="Zonas [%s]" item=RiegoZonas icon="rain" {
+            Frame label="Editar Zonas" {
+                Setpoint item=RiegoZonas minValue=1 maxValue=8 step=1
+            }
+        }
+        Switch item=RiegoModo label="Modo Riego" icon="rain" mappings=[0="Smart", 1="Programa"]
+        Switch item=RiegoPrueba label="Prueba Riego" icon="rain" mappings=[0="Apagado", 1="Probando"]
+        Switch item=RiegoRegar mappings=[OFF="Apagado", ON="Regando"]
+	Switch item=RiegoDebug mappings=[OFF="Apagado", ON="Encendido"]
+    }
+}

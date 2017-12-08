@@ -1,0 +1,2 @@
+# Extract from CASA items file on OpenHAB the Sonoff Devices configured on it and put on a file
+cat /opt/openhab/conf/items/casa.items | grep "cmnd/sonoff_......" -o | grep "sonoff_......" -o > sonoff_devices.txt

@@ -1,0 +1,19 @@
+sitemap sonoff label="Sonoff"
+{
+   Frame label="Device Status" {
+        Group item=gReachable label="Reachable" icon="network" 
+        Group item=gRSSI label="WiFi Signal" icon="signal"
+        Group item=gMQTTVerbose label="MQTT Verbose" icon="text"
+        Group item=gFWVersion label="FW Version" icon="text"
+   }
+
+   Frame label="Maintenance Actions" {
+	Switch item=Sonoff_Action_Test mappings=[restart="Restart", queryFW="Query FW", upgrade="Upgrade FW"]	
+	Text item=Sonoff_Action_Test_FWVersion
+	Text item=Sonoff_Action_Test_FWVersion_WeMos
+	Text item=Sonoff_Action_LastFWVersion
+	Switch item=Sonoff_Action mappings=[restart="Restart", queryFW="Query FW", upgrade="Upgrade FW"]	
+   }
+
+}
+

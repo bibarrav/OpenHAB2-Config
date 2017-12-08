@@ -1,0 +1,110 @@
+/* Groups Defs */
+Group AllSonoff
+Group gReachable (AllSonoff)
+Group gRSSI (AllSonoff)
+Group gMQTTVerbose (AllSonoff)
+Group gFWVersion (AllSonoff)
+
+Group gReachableP1 "1st Floor" (gReachable)
+Group gReachableP2 "2nd Floor" (gReachable)
+Group gReachableP3 "3rd Floor" (gReachable)
+Group gRSSIP1 "1st Floor" (gRSSI)
+Group gRSSIP2 "2nd Floor" (gRSSI)
+Group gRSSIP3 "3rd Floor" (gRSSI)
+Group gMQTTVerboseP1 "1st Floor" (gMQTTVerbose)
+Group gMQTTVerboseP2 "2nd Floor" (gMQTTVerbose)
+Group gMQTTVerboseP3 "3rd Floor" (gMQTTVerbose)
+Group gFWVersionP1 "1st Floor" (gFWVersion)
+Group gFWVersionP2 "2nd Floor" (gFWVersion)
+Group gFWVersionP3 "3rd Floor" (gFWVersion)
+
+/* Reachable Status */
+/** First Floor **/
+Switch 1stFDiningRoom_Light_Reachable "Dining Room Light: reachable" <network> (gReachableP1) {mqtt="<[mqttbroker:tele/sonoff_F8952A/LWT:state:MAP(reachable.map)]"}
+Switch 1stFHallway_Light_Reachable "Hallway Light: reachable" <network> (gReachableP1) {mqtt="<[mqttbroker:tele/sonoff_F987B4/LWT:state:MAP(reachable.map)]"}
+
+/** Second Floor **/
+Switch Bedroom_Light_Reachable "Bedroom Light: reachable" <network> (gReachableP2) {mqtt="<[mqttbroker:tele/sonoff_F9865C/LWT:state:MAP(reachable.map)]"}
+Switch Office_Light_Reachable "Office Light: reachable" <network> (gReachableP2) {mqtt="<[mqttbroker:tele/sonoff_9E0AC5/LWT:state:MAP(reachable.map)]"}
+Switch 2ndFFamilyRoom_Lamp_Reachable "Family Room Lamp: reachable" <network> (gReachableP2) {mqtt="<[mqttbroker:tele/sonoff_173CEF/LWT:state:MAP(reachable.map)]"}
+Switch 2ndFFamilyRoom_Light_Reachable "Family Room Light: reachable" <network> (gReachableP2) {mqtt="<[mqttbroker:tele/sonoff_F49A92/LWT:state:MAP(reachable.map)]"}
+Switch 2ndFHallway_Light_Reachable "Hallway Light: reachable" <network> (gReachableP2) {mqtt="<[mqttbroker:tele/wemos_3A0FE2/LWT:state:MAP(reachable.map)]"}
+Switch 2ndFStairs_Light_Reachable "Stairs Light: reachable" <network> (gReachableP2) {mqtt="<[mqttbroker:tele/sonoff_F98F1C/LWT:state:MAP(reachable.map)]"}
+
+/** Thrid Floor **/
+Switch 3rdFStairs_Light_Reachable "Stairs Light: reachable" <network> (gReachableP3) {mqtt="<[mqttbroker:tele/sonoff_F99008/LWT:state:MAP(reachable.map)]"}
+Switch 3rdFHallway_Light_Reachable "Hallway Light: reachable" <network> (gReachableP3) {mqtt="<[mqttbroker:tele/wemos_3A1045/LWT:state:MAP(reachable.map)]"}
+Switch 3rdFFamilyRoom_Light_Reachable "Family Room Light: reachable" <network> (gReachableP3) {mqtt="<[mqttbroker:tele/sonoff_A87EC7/LWT:state:MAP(reachable.map)]"}
+Switch 3rdFJavieraBedroom_Light_Reachable "Javiera's Bedroom Light: reachable" <network> (gReachableP3) {mqtt="<[mqttbroker:tele/sonoff_A4B3F5/LWT:state:MAP(reachable.map)]"}
+Switch 3rdFVicenteBedroom_Light_Reachable "Vicente's Bedroom Light: reachable" <network> (gReachableP3) {mqtt="<[mqttbroker:tele/sonoff_F9844A/LWT:state:MAP(reachable.map)]"}
+
+
+/* WiFi Signal Status */
+/** First Floor **/
+Number 1stFDiningRoom_Light_RSSI "Dining Room Light: RSSI [%d %%]" <signal> (gRSSIP1) {mqtt="<[mqttbroker:tele/sonoff_F8952A/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Number 1stFHallway_Light_RSSI "Hallway Light: RSSI [%d %%]" <signal> (gRSSIP1) {mqtt="<[mqttbroker:tele/sonoff_F987B4/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+
+/** Second Floor **/
+Number Bedroom_Light_RSSI "Bedroom Light: RSSI [%d %%]" <signal> (gRSSIP2) {mqtt="<[mqttbroker:tele/sonoff_F9865C/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Number Office_Light_RSSI "Office Light: RSSI [%d %%]" <signal> (gRSSIP2) {mqtt="<[mqttbroker:tele/sonoff_9E0AC5/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Number 2ndFFamilyRoom_Lamp_RSSI "Family Room Lamp: RSSI [%d %%]" <signal> (gRSSIP2) {mqtt="<[mqttbroker:tele/sonoff_173CEF/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Number 2ndFFamilyRoom_Light_RSSI "Family Room Light: RSSI [%d %%]" <signal> (gRSSIP2) {mqtt="<[mqttbroker:tele/sonoff_F49A92/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Number 2ndFHallway_Light_RSSI "Hallway Light: RSSI [%d %%]" <signal> (gRSSIP2) {mqtt="<[mqttbroker:tele/wemos_3A0FE2/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Number 2ndFStairs_Light_RSSI "Stairs Light: RSSI [%d %%]" <signal> (gRSSIP2) {mqtt="<[mqttbroker:tele/sonoff_F98F1C/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+
+/** Thrid Floor **/
+Number 3rdFStairs_Light_RSSI "Stairs Light: RSSI [%d %%]" <signal> (gRSSIP3) {mqtt="<[mqttbroker:tele/sonoff_F99008/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Number 3rdFHallway_Light_RSSI "Hallway Light: RSSI [%d %%]" <signal> (gRSSIP3) {mqtt="<[mqttbroker:tele/wemos_3A1045/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Number 3rdFFamilyRoom_Light_RSSI "Family Room Light: RSSI [%d %%]" <signal> (gRSSIP3) {mqtt="<[mqttbroker:tele/sonoff_A87EC7/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Number 3rdFJavieraBedroom_Light_RSSI "Javiera's Bedroom Light: RSSI [%d %%]" <signal> (gRSSIP3) {mqtt="<[mqttbroker:tele/sonoff_A4B3F5/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Number 3rdFVicenteBedroom_Light_RSSI "Vicente's Bedroom Light: RSSI [%d %%]" <signal> (gRSSIP3) {mqtt="<[mqttbroker:tele/sonoff_F9844A/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+
+
+/* MQTT Verbose */
+/** First Floor **/
+String 1stFDiningRoom_Light_Verbose "Dining Room Light: MQTT return message [%s]" (gMQTTVerboseP1) {mqtt="<[mqttbroker:tele/sonoff_F8952A/INFO1:state:default],<[mqttbroker:stat/sonoff_F8952A/STATUS2:state:default],<[mqttbroker:stat/sonoff_F8952A/RESULT:state:default]"}
+String 1stFHallway_Light_Verbose "Hallway Light: MQTT return message [%s]" (gMQTTVerboseP1) {mqtt="<[mqttbroker:tele/sonoff_F987B4/INFO1:state:default],<[mqttbroker:stat/sonoff_F987B4/STATUS2:state:default],<[mqttbroker:stat/sonoff_F987B4/RESULT:state:default]"}
+
+/** Second Floor **/
+String Bedroom_Light_Verbose "Bedroom Light: MQTT return message [%s]" (gMQTTVerboseP2) {mqtt="<[mqttbroker:tele/sonoff_F9865C/INFO1:state:default],<[mqttbroker:stat/sonoff_F9865C/STATUS2:state:default],<[mqttbroker:stat/sonoff_F9865C/RESULT:state:default]"}
+String Office_Light_Verbose "Office Light: MQTT return message [%s]" (gMQTTVerboseP2) {mqtt="<[mqttbroker:tele/sonoff_9E0AC5/INFO1:state:default],<[mqttbroker:stat/sonoff_9E0AC5/STATUS2:state:default],<[mqttbroker:stat/sonoff_9E0AC5/RESULT:state:default]"}
+String 2ndFFamilyRoom_Lamp_Verbose "Family Room Lamp: MQTT return message [%s]" (gMQTTVerboseP2) {mqtt="<[mqttbroker:tele/sonoff_173CEF/INFO1:state:default],<[mqttbroker:stat/sonoff_173CEF/STATUS2:state:default],<[mqttbroker:stat/sonoff_173CEF/RESULT:state:default]"}
+String 2ndFFamilyRoom_Light_Verbose "Family Room Light: MQTT return message [%s]" (gMQTTVerboseP2) {mqtt="<[mqttbroker:tele/sonoff_F49A92/INFO1:state:default],<[mqttbroker:stat/sonoff_F49A92/STATUS2:state:default],<[mqttbroker:stat/sonoff_F49A92/RESULT:state:default]"}
+String 2ndFHallway_Light_Verbose "Hallway Light: MQTT return message [%s]" (gMQTTVerboseP2) {mqtt="<[mqttbroker:tele/wemos_3A0FE2/INFO1:state:default],<[mqttbroker:stat/wemos_3A0FE2/STATUS2:state:default],<[mqttbroker:stat/wemos_3A0FE2/RESULT:state:default]"}
+String 2ndFStairs_Light_Verbose "Stairs Light: MQTT return message [%s]" (gMQTTVerboseP2) {mqtt="<[mqttbroker:tele/sonoff_F98F1C/INFO1:state:default],<[mqttbroker:stat/sonoff_F98F1C/STATUS2:state:default],<[mqttbroker:stat/sonoff_F98F1C/RESULT:state:default]"}
+
+/** Thrid Floor **/
+String 3rdFStairs_Light_Verbose "Stairs Light: MQTT return message [%s]" (gMQTTVerboseP3) {mqtt="<[mqttbroker:tele/sonoff_F99008/INFO1:state:default],<[mqttbroker:stat/sonoff_F99008/STATUS2:state:default],<[mqttbroker:stat/sonoff_F99008/RESULT:state:default]"}
+String 3rdFHallway_Light_Verbose "Hallway Light: MQTT return message [%s]" (gMQTTVerboseP3) {mqtt="<[mqttbroker:tele/wemos_3A1045/INFO1:state:default],<[mqttbroker:stat/wemos_3A1045/STATUS2:state:default],<[mqttbroker:stat/wemos_3A1045/RESULT:state:default]"}
+String 3rdFFamilyRoom_Light_Verbose "Family Room Light: MQTT return message [%s]" (gMQTTVerboseP3) {mqtt="<[mqttbroker:tele/sonoff_A87EC7/INFO1:state:default],<[mqttbroker:stat/sonoff_A87EC7/STATUS2:state:default],<[mqttbroker:stat/sonoff_A87EC7/RESULT:state:default]"}
+String 3rdFJavieraBedroom_Light_Verbose "Javiera's Bedroom Light: MQTT return message [%s]" (gMQTTVerboseP3) {mqtt="<[mqttbroker:tele/sonoff_A4B3F5/INFO1:state:default],<[mqttbroker:stat/sonoff_A4B3F5/STATUS2:state:default],<[mqttbroker:stat/sonoff_A4B3F5/RESULT:state:default]"}
+String 3rdFVicenteBedroom_Light_Verbose "Vicente's Bedroom Light: MQTT return message [%s]" (gMQTTVerboseP3) {mqtt="<[mqttbroker:tele/sonoff_F9844A/INFO1:state:default],<[mqttbroker:stat/sonoff_F9844A/STATUS2:state:default],<[mqttbroker:stat/sonoff_F9844A/RESULT:state:default]"}
+
+
+/* FW Version Status */
+/** First Floor **/
+String 1stFDiningRoom_Light_FWVersion "Dining Room Light: FW Version [%s]" (gFWVersionP1) {mqtt="<[mqttbroker:tele/sonoff_F8952A/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/sonoff_F8952A/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}
+String 1stFHallway_Light_FWVersion "Hallway Light: FW Version [%s]" (gFWVersionP1) {mqtt="<[mqttbroker:tele/sonoff_F987B4/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/sonoff_F987B4/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}
+
+/** Second Floor **/
+String Bedroom_Light_FWVersion "Bedroom Light: FW Version [%s]" (gFWVersionP2) {mqtt="<[mqttbroker:tele/sonoff_F9865C/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/sonoff_F9865C/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}
+String Office_Light_FWVersion "Office Light: FW Version [%s]" (gFWVersionP2) {mqtt="<[mqttbroker:tele/sonoff_9E0AC5/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/sonoff_9E0AC5/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}
+String 2ndFFamilyRoom_Lamp_FWVersion "Family Room Lamp: FW Version [%s]" (gFWVersionP2) {mqtt="<[mqttbroker:tele/sonoff_173CEF/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/sonoff_173CEF/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}
+String 2ndFFamilyRoom_Light_FWVersion "Family Room Light: FW Version [%s]" (gFWVersionP2) {mqtt="<[mqttbroker:tele/sonoff_F49A92/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/sonoff_F49A92/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}
+String 2ndFHallway_Light_FWVersion "Hallway Light: FW Version [%s]" (gFWVersionP2) {mqtt="<[mqttbroker:tele/wemos_3A0FE2/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/wemos_3A0FE2/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}
+String 2ndFStairs_Light_FWVersion "Stairs Light: FW Version [%s]" (gFWVersionP2) {mqtt="<[mqttbroker:tele/sonoff_F98F1C/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/sonoff_F98F1C/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}
+
+/** Thrid Floor **/
+String 3rdFStairs_Light_FWVersion "Stairs Light: FW Version [%s]" (gFWVersionP3) {mqtt="<[mqttbroker:tele/sonoff_F99008/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/sonoff_F99008/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}
+String 3rdFHallway_Light_FWVersion "Hallway Light: FW Version [%s]" (gFWVersionP3) {mqtt="<[mqttbroker:tele/wemos_3A1045/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/wemos_3A1045/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}
+String 3rdFFamilyRoom_Light_FWVersion "Family Room Light: FW Version [%s]" (gFWVersionP3) {mqtt="<[mqttbroker:tele/sonoff_A87EC7/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/sonoff_A87EC7/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}
+String 3rdFJavieraBedroom_Light_FWVersion "Javiera's Bedroom Light: FW Version [%s]" (gFWVersionP3) {mqtt="<[mqttbroker:tele/sonoff_A4B3F5/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/sonoff_A4B3F5/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}
+String 3rdFVicenteBedroom_Light_FWVersion "Vicente's Bedroom Light: FW Version [%s]" (gFWVersionP3) {mqtt="<[mqttbroker:tele/sonoff_F9844A/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/sonoff_F9844A/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}
+
+
+/* Maintenance Actions */
+String  Sonoff_Action_Test "Sonoff Action Test"
+String  Sonoff_Action_Test_FWVersion "Sonoff-Tasmota Sonoff Test Version: [%s]" {mqtt="<[mqttbroker:stat/sonoff_9E0AC5/STATUS2:state:JSONPATH($.StatusFWR.Program)],<[mqttbroker:tele/sonoff_9E0AC5/INFO1:state:JSONPATH($.Version)]"}
+String  Sonoff_Action_Test_FWVersion_WeMos "Sonoff-Tasmota WeMos Test Version: [%s]" {mqtt="<[mqttbroker:stat/wemos_3A0FE2/STATUS2:state:JSONPATH($.StatusFWR.Program)],<[mqttbroker:tele/wemos_3A0FE2/INFO1:state:JSONPATH($.Version)]"}
+String  Sonoff_Action_LastFWVersion "Sonoff-Tasmota Version: [%s]" {mqtt="<[mqttSonoffTasmota:sonoff-version:state:default]"}
+String	Sonoff_Action "Sonoff Action"
