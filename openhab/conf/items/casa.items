@@ -71,4 +71,4 @@ Switch LuzDormitorioVicente "Luz de Dormitorio" <light> (TP_Vicente,gLucesTercer
 /*Accesos*/
 Switch BotonPorton "Porton Electrico" <switch> (Jardin) [ "Switchable" ] {mqtt="<[mqttbroker:mygateway1-out/2/1/1/0/2:state:MAP(switch2.map)],>[mqttbroker:mygateway1-in/2/1/1/0/2:command:ON:0]"}
 String BotonPortonFunciones "Porton Electrico"
-Switch BotonPuertaExterior "Puerta Exterior" <switch> (Jardin) [ "Switchable" ] {mqtt="<[mqttbroker:mygateway1-out/3/7/1/0/2:state:MAP(switch2.map)]"}
+Switch BotonPuertaExterior "Puerta Exterior" <switch> (Jardin) [ "Switchable" ] {mqtt="<[mqttbroker:mygateway1-out/3/7/1/0/2:state:MAP(switch2.map)],>[mqttbroker:mygateway1-in/3/7/1/0/2:command:*:0]"}

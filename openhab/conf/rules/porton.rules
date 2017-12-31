@@ -34,8 +34,8 @@ rule "Puerta Electrica"
 	when
 		Item BotonPuertaExterior changed from OFF to ON
 	then
-		Thread::sleep(1500)
+		Thread::sleep(500)
 		BotonPuertaExterior.sendCommand(OFF)
-		Thread::sleep(300)
+		Thread::sleep(200)
 		BotonPuertaExterior.sendCommand(OFF)
 	end
