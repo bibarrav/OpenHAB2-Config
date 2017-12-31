@@ -1,31 +1,41 @@
 rule "Porton Electrico Funciones"
-when
-	Item BotonPortonFunciones received command
-then
-	logInfo("porton.rules", "Commando Porton Electrico: " + receivedCommand)
-	switch (receivedCommand) {
-		case "ON" : {
-			BotonPorton.sendCommand(ON)
-			BotonPortonFunciones.postUpdate(NULL)
+	when
+		Item BotonPortonFunciones received command
+	then
+		logInfo("porton.rules", "Commando Porton Electrico: " + receivedCommand)
+		switch (receivedCommand) {
+			case "ON" : {
+				BotonPorton.sendCommand(ON)
+				BotonPortonFunciones.postUpdate(NULL)
+			}
+			case "OpenA" : {
+				BotonPorton.sendCommand(ON)
+				Thread::sleep(5000)
+				BotonPorton.sendCommand(ON)
+				BotonPortonFunciones.postUpdate(NULL)
+			}
+			case "OpenB" : {
+				BotonPorton.sendCommand(ON)
+							Thread::sleep(10000)
+							BotonPorton.sendCommand(ON)
+				BotonPortonFunciones.postUpdate(NULL)
+			}
 		}
-		case "OpenA" : {
-			BotonPorton.sendCommand(ON)
-			Thread::sleep(5000)
-			BotonPorton.sendCommand(ON)
-			BotonPortonFunciones.postUpdate(NULL)
-		}
-		case "OpenB" : {
-			BotonPorton.sendCommand(ON)
-                        Thread::sleep(10000)
-                        BotonPorton.sendCommand(ON)
-			BotonPortonFunciones.postUpdate(NULL)
-		}
-	}
-end
+	end
 
 rule "Porton Electrico"
-when
-	Item BotonPorton changed from OFF to ON
-then
-	BotonPorton.postUpdate(OFF)
-end
+	when
+		Item BotonPorton changed from OFF to ON
+	then
+		BotonPorton.postUpdate(OFF)
+	end
+
+rule "Puerta Electrica"
+	when
+		Item BotonPuertaExterior changed from OFF to ON
+	then
+		Thread::sleep(1500)
+		BotonPuertaExterior.sendCommand(OFF)
+		Thread::sleep(300)
+		BotonPuertaExterior.sendCommand(OFF)
+	end
