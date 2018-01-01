@@ -47,4 +47,6 @@ rule "Boton Puerta Electrica"
 	then
 		logInfo("porton.rules", "Commando Boton Puerta Electrica: " + receivedCommand)
 		PuertaExterior.sendCommand(ON)
+		Thread::sleep(2000)
+		BotonPuertaExterior.sendCommand(OFF)
 	end
