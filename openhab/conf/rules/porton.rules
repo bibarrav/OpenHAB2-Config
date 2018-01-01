@@ -32,8 +32,9 @@ rule "Porton Electrico"
 
 rule "Puerta Electrica"
 	when
-		Item BotonPuertaExterior changed from OFF to ON
+		Item BotonPuertaExterior received Command ON
 	then
+		logInfo("porton.rules", "Commando Puerta Electrica: " + receivedCommand)
 		Thread::sleep(500)
 		BotonPuertaExterior.sendCommand(OFF)
 		Thread::sleep(200)
