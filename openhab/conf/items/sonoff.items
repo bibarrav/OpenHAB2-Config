@@ -22,6 +22,7 @@ Group gFWVersionP3 "3rd Floor" (gFWVersion)
 /** First Floor **/
 Switch 1stFDiningRoom_Light_Reachable "Dining Room Light: reachable" <network> (gReachableP1) {mqtt="<[mqttbroker:tele/sonoff_F8952A/LWT:state:MAP(reachable.map)]"}
 Switch 1stFHallway_Light_Reachable "Hallway Light: reachable" <network> (gReachableP1) {mqtt="<[mqttbroker:tele/sonoff_F987B4/LWT:state:MAP(reachable.map)]"}
+Switch BotonPuertaExterior_Reachable "Button Frontdoor: reachable" <network> (gReachableP1) {mqtt="<[mqttbroker:tele/sonoff_A75F9F/LWT:state:MAP(reachable.map)]"}
 
 /** Second Floor **/
 Switch Bedroom_Light_Reachable "Bedroom Light: reachable" <network> (gReachableP2) {mqtt="<[mqttbroker:tele/sonoff_F9865C/LWT:state:MAP(reachable.map)]"}
@@ -43,6 +44,7 @@ Switch 3rdFVicenteBedroom_Light_Reachable "Vicente's Bedroom Light: reachable" <
 /** First Floor **/
 Number 1stFDiningRoom_Light_RSSI "Dining Room Light: RSSI [%d %%]" <signal> (gRSSIP1) {mqtt="<[mqttbroker:tele/sonoff_F8952A/STATE:state:JSONPATH($.Wifi.RSSI)]"}
 Number 1stFHallway_Light_RSSI "Hallway Light: RSSI [%d %%]" <signal> (gRSSIP1) {mqtt="<[mqttbroker:tele/sonoff_F987B4/STATE:state:JSONPATH($.Wifi.RSSI)]"}
+Number BotonPuertaExterior_RSSI "Button Frontdoor: RSSI [%d %%]" <signal> (gRSSIP1) {mqtt="<[mqttbroker:tele/sonoff_A75F9F/STATE:state:JSONPATH($.Wifi.RSSI)]"}
 
 /** Second Floor **/
 Number Bedroom_Light_RSSI "Bedroom Light: RSSI [%d %%]" <signal> (gRSSIP2) {mqtt="<[mqttbroker:tele/sonoff_F9865C/STATE:state:JSONPATH($.Wifi.RSSI)]"}
@@ -64,6 +66,7 @@ Number 3rdFVicenteBedroom_Light_RSSI "Vicente's Bedroom Light: RSSI [%d %%]" <si
 /** First Floor **/
 String 1stFDiningRoom_Light_Verbose "Dining Room Light: MQTT return message [%s]" (gMQTTVerboseP1) {mqtt="<[mqttbroker:tele/sonoff_F8952A/INFO1:state:default],<[mqttbroker:stat/sonoff_F8952A/STATUS2:state:default],<[mqttbroker:stat/sonoff_F8952A/RESULT:state:default]"}
 String 1stFHallway_Light_Verbose "Hallway Light: MQTT return message [%s]" (gMQTTVerboseP1) {mqtt="<[mqttbroker:tele/sonoff_F987B4/INFO1:state:default],<[mqttbroker:stat/sonoff_F987B4/STATUS2:state:default],<[mqttbroker:stat/sonoff_F987B4/RESULT:state:default]"}
+String BotonPuertaExterior_Verbose "Button Frontdoor: MQTT return message [%s]" (gMQTTVerboseP1) {mqtt="<[mqttbroker:tele/sonoff_A75F9F/INFO1:state:default],<[mqttbroker:stat/sonoff_A75F9F/STATUS2:state:default],<[mqttbroker:stat/sonoff_A75F9F/RESULT:state:default]"}
 
 /** Second Floor **/
 String Bedroom_Light_Verbose "Bedroom Light: MQTT return message [%s]" (gMQTTVerboseP2) {mqtt="<[mqttbroker:tele/sonoff_F9865C/INFO1:state:default],<[mqttbroker:stat/sonoff_F9865C/STATUS2:state:default],<[mqttbroker:stat/sonoff_F9865C/RESULT:state:default]"}
@@ -85,6 +88,7 @@ String 3rdFVicenteBedroom_Light_Verbose "Vicente's Bedroom Light: MQTT return me
 /** First Floor **/
 String 1stFDiningRoom_Light_FWVersion "Dining Room Light: FW Version [%s]" (gFWVersionP1) {mqtt="<[mqttbroker:tele/sonoff_F8952A/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/sonoff_F8952A/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}
 String 1stFHallway_Light_FWVersion "Hallway Light: FW Version [%s]" (gFWVersionP1) {mqtt="<[mqttbroker:tele/sonoff_F987B4/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/sonoff_F987B4/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}
+String BotonPuertaExterior_FWVersion "Button Frontdoor: FW Version [%s]" (gFWVersionP1) {mqtt="<[mqttbroker:tele/sonoff_A75F9F/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/sonoff_A75F9F/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}
 
 /** Second Floor **/
 String Bedroom_Light_FWVersion "Bedroom Light: FW Version [%s]" (gFWVersionP2) {mqtt="<[mqttbroker:tele/sonoff_F9865C/INFO1:state:JSONPATH($.Version)],<[mqttbroker:stat/sonoff_F9865C/STATUS2:state:JSONPATH($.StatusFWR.Program)]"}

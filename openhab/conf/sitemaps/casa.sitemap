@@ -74,6 +74,6 @@ sitemap casa label="Casa"
    }
    Frame label="Accesos" {
 	Switch item=BotonPortonFunciones icon="garagedoor" mappings=[ON="Accion", OpenA="5seg", OpenB="10seg"]
-        Switch item=BotonPuertaExterior icon="frontdoor" mappings=[ON="Accion"]
+        Switch item=PuertaExterior icon="frontdoor" mappings=[ON="Accion"]
    }
 }
