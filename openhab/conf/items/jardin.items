@@ -52,3 +52,8 @@ Switch RiegoZona3 "Riego Zona3" <rain> (Jardin) [ "Switchable" ] {mqtt="<[mqttbr
 Switch RiegoZona4 "Riego Zona4" <rain> (Jardin) [ "Switchable" ] {mqtt="<[mqttbroker:mygateway1-out/3/4/1/0/2:state:MAP(switch2.map)]"}
 Switch RiegoDebug "Modo DEBUG" <switch> {mqtt="<[mqttbroker:mygateway1-out/3/22/1/0/2:state:MAP(switch.map)],>[mqttbroker:mygateway1-in/3/22/1/0/2:command:ON:1],>[mqttbroker:mygateway1-in/3/22/1/0/2:command:OFF:0]"}
 
+Number RiegoFlujo "Flujo Agua (l/min) [%.2f]" <faucet> (Jardin) {mqtt="<[mqttbroker:mygateway1-out/3/23/1/0/34:state:default]"}
+Number RiegoVolumen "Volumen Agua (m3) [%.3f]" <faucet> (Jardin) {mqtt="<[mqttbroker:mygateway1-out/3/23/1/0/35:state:default]"}
+Number RiegoPulseCount "Pulsaciones [%d]" <faucet> (Jardin) {mqtt="<[mqttbroker:mygateway1-out/3/23/1/0/24:state:default]"}
+Switch FlowMeter "Usar FlowMeter" <faucet> {mqtt="<[mqttbroker:mygateway1-out/3/23/1/0/2:state:MAP(switch.map)],>[mqttbroker:mygateway1-in/3/23/1/0/2:command:ON:1],>[mqttbroker:mygateway1-in/3/23/1/0/2:command:OFF:0]"}
+Switch WatchDog "Usar WatchDog" {mqtt="<[mqttbroker:mygateway1-out/3/24/1/0/2:state:MAP(switch.map)],>[mqttbroker:mygateway1-in/3/24/1/0/2:command:ON:1],>[mqttbroker:mygateway1-in/3/24/1/0/2:command:OFF:0]"}
